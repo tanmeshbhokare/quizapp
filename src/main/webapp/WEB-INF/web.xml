@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>Archetype Created Web Application</display-name>
+	<welcome-file-list>
+
+		<welcome-file>index.jsp</welcome-file>
+
+	</welcome-file-list>
+
+
+	<servlet>
+		<servlet-name>Login</servlet-name>
+		<servlet-class>com.devops.capstone.controllerWithoutDb.UserLoginController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>Register</servlet-name>
+		<servlet-class>com.devops.capstone.controllerWithoutDb.UserRegisterController</servlet-class>
+	</servlet>
+	
+	<servlet>
+		<servlet-name>GetPassword</servlet-name>
+		<servlet-class>com.devops.capstone.controllerWithoutDb.UserPasswordController</servlet-class>
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>Login</servlet-name>
+		<url-pattern>/Login</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Register</servlet-name>
+		<url-pattern>/Register</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>GetPassword</servlet-name>
+		<url-pattern>/GetPassword</url-pattern>
+	</servlet-mapping>
+</web-app>
