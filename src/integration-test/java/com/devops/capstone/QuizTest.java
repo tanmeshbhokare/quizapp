@@ -63,7 +63,7 @@ public void quizSuccess() {
 
     System.out.println("Started Quiz 1");
     
-    driver.get("http://192.168.56.102:10200/Quiz_Minds/success.jsp");
+    driver.get("http://localhost:9090/quizapp/success.jsp");
 
     driver.findElement(By.xpath("//button[contains(text(),'Quiz 1')]")).click();
     
