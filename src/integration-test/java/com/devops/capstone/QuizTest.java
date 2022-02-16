@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -29,9 +30,11 @@ String baseUrl = "http://localhost:9090/quizapp/";
 
 @BeforeClass
 public static void setup() {
-	Path path = FileSystems.getDefault().getPath("src/main/resources/geckodriver");
+    Path path = FileSystems.getDefault().getPath("src/main/resources/geckodriver");
     System.setProperty("webdriver.gecko.driver",path.toString());
-    driver = new FirefoxDriver();
+    FirefoxOptions options = new FirefoxOptions();
+    options.setHeadless(true);
+    driver = new FirefoxDriver(options);
 }
 
 @AfterClass
@@ -41,20 +44,19 @@ driver.quit();
 
 @Test
 public void checkHomepageTitle() {
-	driver.get(baseUrl);   
+    driver.get(baseUrl);   
     assertTrue(driver.getTitle().contains("Login"));
 }
-
+	
 @Test
 public void loginSuccess() {
+    
     WebElement username=driver.findElement(By.name("email"));
     WebElement password=driver.findElement(By.name("password"));
     WebElement login=driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
-            
     username.sendKeys("avinash.patel@wipro.com");
     password.sendKeys("1234");
     login.click();
-    
     assertTrue(driver.getTitle().contains("Quiz Minds"));
 }
 

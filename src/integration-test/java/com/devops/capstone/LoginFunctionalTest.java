@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.junit.*;
@@ -23,10 +24,11 @@ static WebDriver driver;
 
 @BeforeClass
 public static void setup() {
-//driver = new FirefoxDriver();
-	Path path = FileSystems.getDefault().getPath("src/main/resources/geckodriver");
-        System.setProperty("webdriver.gecko.driver",path.toString());
-        driver = new FirefoxDriver();
+    Path path = FileSystems.getDefault().getPath("src/main/resources/geckodriver");
+    System.setProperty("webdriver.gecko.driver",path.toString());
+    FirefoxOptions options = new FirefoxOptions();
+    options.setHeadless(true);
+    driver = new FirefoxDriver(options);
 }
 
 @AfterClass
