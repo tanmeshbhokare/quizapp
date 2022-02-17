@@ -10,5 +10,5 @@
           shell : 'docker service rm quizapp'
         - name: Docker Swarm
           shell: 'docker service create --name quizapp --replicas 1 --publish 18018:8080 quizapp'
-
+  become: yes
 
