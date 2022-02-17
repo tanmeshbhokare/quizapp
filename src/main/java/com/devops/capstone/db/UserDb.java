@@ -16,9 +16,9 @@ public class UserDb {
 	
 	public UserDb(){
 		
-		User u1=new User("Avinash","Patel","1234","avinash.patel@wipro.com");
-		User u2=new User("Prakash","Ramamurthy","abcd","prakash.ramamurthy@wipro.com");
-		User u3=new User("Raghavendran","Sethumadhavan","pqrs","raghavendran.sethumadhavan1@wipro.com");
+		User u1=new User("Tanmesh","Bhokare","1234","tanmesh@wipro.com");
+		User u2=new User("Mikhil","Gangwani","1234","mikhil@wipro.com");
+		User u3=new User("Chandana","B N","1234","chandana@wipro.com");
 	
 		
 		userProfile.put(u1.getEmail(), u1);
