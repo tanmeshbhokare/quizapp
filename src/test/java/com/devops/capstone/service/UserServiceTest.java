@@ -10,13 +10,13 @@ public class UserServiceTest {
 
 	@Test
 	public void testIsAutherozied() {
-		User u1=new User("Avinash","Patel","1234","avinash.patel@wipro.com");
+		User u1=new User("Tanmesh","Bhokare","1234","tanmesh@wipro.com");
 		assertEquals(true,new UserService().isAuthorized(u1));
 	}
 
 	@Test
 	public void testUpdatePassword() {
-		User u1=new User("","","9876","avinash.patel@wipro.com");
+		User u1=new User("","","9876","tanmesh@wipro.com");
 		assertEquals(true,new UserService().updatePassword(u1));
 	}
 

@@ -32,7 +32,7 @@ public class RegisterTest extends Mockito{
     public void testRegistrationSuccess() throws Exception {
     	when(request.getParameter("firstname")).thenReturn("fname");
     	when(request.getParameter("lastname")).thenReturn("lname");
-        when(request.getParameter("email")).thenReturn("Xavinash.patel@wipro.com");
+        when(request.getParameter("email")).thenReturn("unknown@wipro.com");
         when(request.getParameter("pass")).thenReturn("1234");
         when(request.getParameter("confirmpass")).thenReturn("1234");
         when(request.getRequestDispatcher("/index.jsp")).thenReturn(rd);            
@@ -52,7 +52,7 @@ public class RegisterTest extends Mockito{
     public void testRegistrationFail() throws Exception {
     	when(request.getParameter("firstname")).thenReturn("fname");
     	when(request.getParameter("lastname")).thenReturn("lname");
-        when(request.getParameter("email")).thenReturn("avinash.patel@wipro.com");
+        when(request.getParameter("email")).thenReturn("tanmesh@wipro.com");
         when(request.getParameter("pass")).thenReturn("1234");
         when(request.getParameter("confirmpass")).thenReturn("12345");
         when(request.getRequestDispatcher("/register.jsp")).thenReturn(rd);            

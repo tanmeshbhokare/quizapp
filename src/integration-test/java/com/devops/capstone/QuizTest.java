@@ -54,7 +54,7 @@ public void loginSuccess() {
     WebElement username=driver.findElement(By.name("email"));
     WebElement password=driver.findElement(By.name("password"));
     WebElement login=driver.findElement(By.xpath("//button[contains(text(),'Login')]"));
-    username.sendKeys("avinash.patel@wipro.com");
+    username.sendKeys("tanmesh@wipro.com");
     password.sendKeys("1234");
     login.click();
     assertTrue(driver.getTitle().contains("Quiz Minds"));
@@ -123,6 +123,9 @@ public void quizSuccess() {
     expectedscore = "You answered 5/5 questions correctly";
     
     assertTrue(score.contentEquals(expectedscore));
+
+    System.out.println("Completed Quiz 2");
+
     
 }
 

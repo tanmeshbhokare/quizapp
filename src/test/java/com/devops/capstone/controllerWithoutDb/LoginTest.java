@@ -29,7 +29,7 @@ public class LoginTest extends Mockito{
 
     @Test
     public void testLoginSuccess() throws Exception {
-        when(request.getParameter("email")).thenReturn("avinash.patel@wipro.com");
+        when(request.getParameter("email")).thenReturn("tanmesh@wipro.com");
         when(request.getParameter("password")).thenReturn("1234");
         when(request.getRequestDispatcher("/success.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();
@@ -46,7 +46,7 @@ public class LoginTest extends Mockito{
     
     //@Test
     public void testLoginFail() throws Exception {
-        when(request.getParameter("email")).thenReturn("avinash.patel@wipro.com");
+        when(request.getParameter("email")).thenReturn("tanmesh@wipro.com");
         when(request.getParameter("password")).thenReturn("12345");
         when(request.getRequestDispatcher("/fail.jsp")).thenReturn(rd);            
         StringWriter stringWriter = new StringWriter();

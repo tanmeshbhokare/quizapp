@@ -42,7 +42,7 @@ public void loginSuccess() {
         WebElement email = driver.findElement(By.name("email"));
         WebElement pass = driver.findElement(By.name("password"));
         WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));         
-        email.sendKeys("avinash.patel@wipro.com");
+        email.sendKeys("tanmesh@wipro.com");
         pass.sendKeys("1234");
         button.click();
         assertTrue(driver.getTitle().contains("Quiz Minds"));
@@ -54,10 +54,11 @@ public void loginFail() {
         WebElement email = driver.findElement(By.name("email"));
         WebElement pass = driver.findElement(By.name("password"));
         WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));         
-        email.sendKeys("tanmesh@wipro.com");
+        email.sendKeys("abcd@wipro.com");
         pass.sendKeys("1234566666");
         button.click();
-        assertTrue(driver.getPageSource().contains("Invalid username or password, Please try again with valid"));
+	System.out.println(driver.getTitle());
+	assertTrue(driver.getTitle().contains("FailPage"));
 }
 	
 @Test
@@ -87,7 +88,7 @@ public void forgotPasswordSuccess() {
         WebElement button = driver.findElement(By.xpath("/html/body/form/div/button"));      
         pass.sendKeys("1234");
         confirmpass.sendKeys("1234");
-        email.sendKeys("avinash.patel@wipro.com");
+        email.sendKeys("tanmesh@wipro.com");
         button.click();
         assertTrue(driver.getPageSource().contains("Quiz Minds"));
 }
