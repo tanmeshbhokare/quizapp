@@ -1,0 +1,14 @@
+- hosts: localhost
+  tasks:
+        - name: Copy war file from jenkins workspace
+          copy:
+                src: /var/lib/jenkins/workspace/Capstone-CI/target/quizapp.war
+                dest: /home/tanmesh/devops/quizapp
+        - name: Docker image Build
+          shell: 'docker image build -t quizapp /home/tanmesh/devops/quizapp'
+        - name: Stop Docker Service
+          shell : 'docker service rm quizapp'
+        - name: Docker Swarm
+          shell: 'docker service create --name quizapp --replicas 1 --publish 18018:8080 quizapp'
+
+
