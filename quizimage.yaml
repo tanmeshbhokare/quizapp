@@ -3,9 +3,9 @@
         - name: Copy war file from jenkins workspace
           copy:
                 src: /var/lib/jenkins/workspace/Capstone-CI/target/quizapp.war
-                dest: /home/tanmesh/devops/quizapp
+                dest: /var/lib/jenkins/workspace/Capstone-CI
         - name: Docker image Build
-          shell: 'docker image build -t quizapp /home/tanmesh/devops/quizapp'
+          shell: 'docker image build -t quizapp /var/lib/jenkins/workspace/Capstone-CI'
         - name: Stop Docker Service
           shell : 'docker service rm quizapp'
         - name: Docker Swarm
