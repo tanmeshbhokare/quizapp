@@ -27,7 +27,7 @@ input[type=text], input[type=password] {
 
 button {
     background-color:#008CBA ;
-    color: white;
+    color: yellow;
     padding: 14px 20px;
     margin: 8px 0;
     border: none;
@@ -60,7 +60,7 @@ span.psw {
 </style>
 </head>
 <body>
-	<h1 style="text-align:center">Quiz App</h1>
+	<h1 style="text-align:center">Quiz Minds</h1>
 	<form action="Login" method="post">
 	  <div class="container" >
 	    <label><b>Email</b></label>
