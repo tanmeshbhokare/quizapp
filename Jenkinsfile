@@ -30,7 +30,7 @@ stages {
 			def uploadSpec = """{
 				"files": [{
 					"pattern": "*.war",
-					"target": "quizapp/libs-snapshot-local/"
+					"target": "quizapp/${BUILD_NUMBER}/"
 					}]
 				}"""
 			server.upload(uploadSpec)
