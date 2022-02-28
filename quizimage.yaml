@@ -1,9 +1,5 @@
 - hosts: localhost
   tasks:
-        - name: Copy war file from jenkins workspace
-          copy:
-                src: /var/lib/jenkins/workspace/Capstone-CI/target/quizapp.war
-                dest: /var/lib/jenkins/workspace/Capstone-CI
         - name: Docker image Build
           shell: 'docker image build -t quizapp /var/lib/jenkins/workspace/Capstone-CI'
         - name: Stop Docker Service

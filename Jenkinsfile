@@ -38,6 +38,12 @@ stages {
 		  }       
         }
 
+    stage('Download Artifacts'){
+        steps{
+            build job: 'download-artifact'
+            }
+        }
+
     stage('Invoking CD Part'){
         steps{
             build job: 'Capstone-CD'
