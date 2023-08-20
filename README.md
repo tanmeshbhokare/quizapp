@@ -12,3 +12,5 @@ On Ubuntu/Any Linux
 - Install SonarQube
 - Install Artifactory
 - Install Ansible
+- Install Docker and Docker compose
+- Install Prometheus
